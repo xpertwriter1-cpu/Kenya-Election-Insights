@@ -1,0 +1,372 @@
+{
+  "counties": [
+    "Baringo",
+    "Bomet",
+    "Bungoma",
+    "Busia",
+    "Elgeyo-Marakwet",
+    "Embu",
+    "Garissa",
+    "Homa Bay",
+    "Isiolo",
+    "Kajiado",
+    "Kakamega",
+    "Kericho",
+    "Kiambu",
+    "Kilifi",
+    "Kirinyaga",
+    "Kisii",
+    "Kisumu",
+    "Kitui",
+    "Kwale",
+    "Laikipia",
+    "Lamu",
+    "Machakos",
+    "Makueni",
+    "Mandera",
+    "Marsabit",
+    "Meru",
+    "Migori",
+    "Mombasa",
+    "Murang'a",
+    "Nairobi",
+    "Nakuru",
+    "Nandi",
+    "Narok",
+    "Nyamira",
+    "Nyandarua",
+    "Nyeri",
+    "Samburu",
+    "Siaya",
+    "Taita-Taveta",
+    "Tana River",
+    "Tharaka-Nithi",
+    "Trans Nzoia",
+    "Turkana",
+    "Uasin Gishu",
+    "Vihiga",
+    "Wajir",
+    "West Pokot"
+  ],
+  "polls": [
+    {
+      "pollster": "Politrack Research Team",
+      "published": "1 October 2026",
+      "fieldwork": "15–25 September 2026",
+      "sample": "20,419 respondents",
+      "method": "Text-based platform survey; review full sampling and weighting disclosure",
+      "margin": "±3 percentage points (reported)",
+      "question": "Presidential candidate preference at time of survey",
+      "results": [
+        [
+          "William Ruto",
+          45.1
+        ],
+        [
+          "Edwin Sifuna",
+          19.6
+        ],
+        [
+          "Kalonzo Musyoka",
+          10.3
+        ],
+        [
+          "Fred Matiang’i",
+          7.2
+        ],
+        [
+          "Rigathi Gachagua",
+          6
+        ]
+      ],
+      "undecided": 8.4,
+      "source": "https://www.the-star.co.ke/news/2026-10-01-ruto-tops-presidential-race-poll-with-451",
+      "caveat": "Text-based surveys can have coverage and self-selection bias. Confirm the full technical disclosure before comparing with face-to-face surveys.",
+      "checkedAt": "17 October 2026",
+      "verification": "Checked against reporting by The Star; original technical report not reviewed."
+    },
+    {
+      "pollster": "TIFA Research",
+      "published": "26 July 2026",
+      "fieldwork": "13–22 June 2026",
+      "sample": "2,048 adults across all 47 counties",
+      "method": "Face-to-face household interviews",
+      "margin": "±2.18 percentage points (reported)",
+      "question": "Whom would you like to win the 2027 presidential election?",
+      "results": [
+        [
+          "William Ruto",
+          24
+        ],
+        [
+          "Edwin Sifuna",
+          15
+        ],
+        [
+          "Fred Matiang’i",
+          14
+        ],
+        [
+          "Kalonzo Musyoka",
+          13
+        ],
+        [
+          "Rigathi Gachagua",
+          7
+        ]
+      ],
+      "undecided": 20,
+      "source": "https://www.tifaresearch.com/kenyas-road-to-2027-general-election-political-parties-presidential-contest-and-coalition-dynamics/",
+      "caveat": "This is a dated preference snapshot, not a forecast. Candidate lists, alliances, turnout and views may change.",
+      "checkedAt": "17 October 2026",
+      "verification": "Checked against the pollster publication."
+    },
+    {
+      "pollster": "Infotrak Research",
+      "published": "13 July 2026",
+      "fieldwork": "22–26 June 2026",
+      "sample": "3,000 respondents across all 47 counties",
+      "method": "Face-to-face and telephone interviews",
+      "margin": "±1.79 percentage points (reported)",
+      "question": "Presidential aspirant preference",
+      "results": [
+        [
+          "William Ruto",
+          32
+        ],
+        [
+          "Kalonzo Musyoka",
+          13
+        ],
+        [
+          "Edwin Sifuna",
+          12
+        ],
+        [
+          "Fred Matiang’i",
+          12
+        ],
+        [
+          "Rigathi Gachagua",
+          4
+        ]
+      ],
+      "undecided": 18,
+      "source": "https://www.kenyanews.go.ke/president-william-ruto-leading-with-32-per-cent-infotrak/",
+      "caveat": "Polls use different dates, questions, samples and methods; results are not directly interchangeable.",
+      "checkedAt": "17 October 2026",
+      "verification": "Source unavailable during latest check; existing figures remain unverified."
+    }
+  ],
+  "economy": [
+    {
+      "label": "Real GDP growth",
+      "value": "4.6%",
+      "period": "2025",
+      "detail": "KNBS reported real GDP growth of 4.6% in 2025, compared with 4.7% in 2024.",
+      "source": "https://www.knbs.or.ke/reports/2026-economic-survey/"
+    },
+    {
+      "label": "Construction sector",
+      "value": "+6.8%",
+      "period": "2025",
+      "detail": "KNBS reported construction returned to growth in 2025 after a contraction in 2024.",
+      "source": "https://www.knbs.or.ke/reports/2026-economic-survey/"
+    },
+    {
+      "label": "Agriculture, forestry and fishing",
+      "value": "+3.1%",
+      "period": "2025",
+      "detail": "KNBS reported expansion in this sector, which accounts for over one-fifth of the economy.",
+      "source": "https://www.knbs.or.ke/reports/2026-economic-survey/"
+    },
+    {
+      "label": "Debt-service pressure",
+      "value": "About 40% of revenue",
+      "period": "Reuters · 7 October 2026",
+      "detail": "Reuters reported debt servicing consumes about 40% of government revenue, constraining public finance choices.",
+      "source": "https://www.reuters.com/world/africa/kenya-infrastructure-fund-begins-deploying-26-billion-seed-capital-by-buying-2026-10-07/"
+    }
+  ],
+  "developments": [
+    {
+      "title": "Boma Yangu Mukuru Estate · Mukuru Met Site",
+      "area": "Housing and urban development",
+      "date": "Boma Yangu project listing · checked 17 October 2026",
+      "summary": "Boma Yangu lists Mukuru Estate as an ongoing project in South B, Nairobi, and describes the Mukuru Met Site social-housing development near Enterprise Road. Its project page includes photos of housing blocks under development. The listing does not establish completion, handover, occupancy, or affordability outcomes.",
+      "watch": "Check dated project updates for construction progress, completed and occupied units, handover to eligible households, affordability, resident rehousing, budgets, and audit findings.",
+      "source": "https://www.bomayangu.go.ke/projects"
+    },
+    {
+      "title": "Affordable housing and slum-upgrading programmes",
+      "area": "Housing and urban development",
+      "date": "Official department programme information · check for dated project updates",
+      "summary": "The State Department for Housing and Urban Development lists affordable housing and slum upgrading among its responsibilities. Programme information alone does not confirm results at a specific site.",
+      "watch": "For Mukuru and other locations, verify dated project plans, site and parcel details, budgets, construction milestones, completed and occupied units, resident rehousing, affordability, and audit findings using project-specific official records.",
+      "source": "https://www.housingandurban.go.ke/"
+    },
+    {
+      "title": "National Infrastructure Fund begins deploying seed capital",
+      "area": "Infrastructure and finance",
+      "date": "7 October 2026",
+      "summary": "Reuters reported the fund began buying domestic government bonds, with a stated aim of improving bank liquidity and mobilising investment in energy, transport, ICT, water and agriculture.",
+      "watch": "Track actual disbursements, funded projects, private lending, value for money and public liabilities—not only announced targets.",
+      "source": "https://www.reuters.com/world/africa/kenya-infrastructure-fund-begins-deploying-26-billion-seed-capital-by-buying-2026-10-07/"
+    },
+    {
+      "title": "New national development framework announced",
+      "area": "National planning",
+      "date": "August 2026",
+      "summary": "The Standard reported a proposed national development framework intended to succeed Vision 2030.",
+      "watch": "Look for published plans, budget allocations, timelines, county-level delivery and independent progress audits.",
+      "source": "https://www.standardmedia.co.ke/national/article/2001554199/ruto-unveils-new-development-vision-as-hustlers-struggle-with-living-costs"
+    },
+    {
+      "title": "Economic growth and sector performance",
+      "area": "Economy",
+      "date": "2026 Economic Survey · 2025 results",
+      "summary": "KNBS reported 4.6% real GDP growth in 2025, with construction at 6.8% and agriculture at 3.1%.",
+      "watch": "GDP growth alone does not describe household purchasing power, job quality, inequality or the cost of essentials.",
+      "source": "https://www.knbs.or.ke/reports/2026-economic-survey/"
+    }
+  ],
+  "developmentGallery": [
+    {
+      "category": "Mukuru · earlier conditions",
+      "title": "Mukuru Kwa Njenga: sanitation conditions documented in 2010",
+      "description": "Historical photograph documented in Mukuru in November 2010 and described by its source as a sanitation situation. It predates current housing programmes and is not a current conditions survey or a like-for-like before photo for any later project.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Mukuru_Sanitation_Situation_%285507763804%29.jpg",
+      "imageAlt": "Sanitation conditions in Mukuru, photographed in November 2010",
+      "imageDate": "24 November 2010",
+      "credit": "SuSanA Secretariat · CC BY 2.0",
+      "license": "https://creativecommons.org/licenses/by/2.0/",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Mukuru_Sanitation_Situation_(5507763804).jpg",
+      "sourceLabel": "Photo details and license",
+      "projectSource": "https://www.housingandurban.go.ke/",
+      "projectSourceLabel": "Official housing and slum-upgrading programme information"
+    },
+    {
+      "category": "Mukuru · Boma Yangu project photo",
+      "title": "Mukuru Estate housing blocks · South B",
+      "description": "Photo shown on Boma Yangu's official Mukuru Estate project listing. The listing marks the project as ongoing and places it in South B, Nairobi. The image shows housing blocks and construction activity; it is not proof that the homes are complete, occupied, or handed over.",
+      "image": "https://bomayangu.go.ke/media/projects/mukuru-affordable-housing-project-nairobi-county/images/thumb/image_3.jpeg",
+      "imageAlt": "Housing blocks and construction activity shown on the Boma Yangu Mukuru Estate project listing",
+      "imageDate": "Photo date not stated by listing · listing checked 17 October 2026",
+      "credit": "Boma Yangu official project listing · displayed with permission confirmed by the site operator",
+      "photoSource": "https://www.bomayangu.go.ke/projects",
+      "sourceLabel": "View official project listing",
+      "projectSource": "https://www.bomayangu.go.ke/projects",
+      "projectSourceLabel": "Project status and location"
+    },
+    {
+      "category": "Mukuru · recent neighborhood context",
+      "title": "Mukuru Kwa Njenga: drainage conditions documented in 2024",
+      "description": "A separate photo from 24 October 2024, described by its photographer as showing poor drainage in Mukuru Kwa Njenga. It shows neighborhood conditions, not newly developed houses or the results of a government housing project; it is not a matched after photo for the 2010 image.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Mukuru_Kwa_Njenga_Slums-Nairobi.jpg/960px-Mukuru_Kwa_Njenga_Slums-Nairobi.jpg",
+      "imageAlt": "Drainage conditions in Mukuru Kwa Njenga, photographed in October 2024",
+      "imageDate": "24 October 2024",
+      "credit": "Cmwaura · CC BY-SA 4.0",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Mukuru_Kwa_Njenga_Slums-Nairobi.jpg",
+      "sourceLabel": "Photo details and license",
+      "projectSource": "https://www.housingandurban.go.ke/",
+      "projectSourceLabel": "Official housing and slum-upgrading programme information"
+    },
+    {
+      "category": "Roads",
+      "title": "Mombasa Road construction works",
+      "description": "Road-work photograph described as Mombasa Road under construction. The image dates to 23 June 2021 and is historical context, not evidence of a current contract or its status.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Construction_Road_Works.jpg/960px-Construction_Road_Works.jpg",
+      "imageAlt": "Road construction works on Mombasa Road",
+      "imageDate": "23 June 2021",
+      "credit": "Trevor Bake · CC BY-SA 4.0",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Construction_Road_Works.jpg",
+      "sourceLabel": "Photo details and license"
+    },
+    {
+      "category": "Housing",
+      "title": "Affordable Housing Programme",
+      "description": "Historical photo of Nairobi housing taken in July 2017, before the current administration. It is illustrative context only and does not depict or verify homes delivered through the government's Affordable Housing Programme.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Housing_in_Nairobi_02.jpg/960px-Housing_in_Nairobi_02.jpg",
+      "imageAlt": "Housing in Nairobi, photographed in July 2017",
+      "imageDate": "11 July 2017",
+      "credit": "flightlog · CC BY 2.0",
+      "license": "https://creativecommons.org/licenses/by/2.0/",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Housing_in_Nairobi_02.jpg",
+      "sourceLabel": "Photo details and license",
+      "projectSource": "https://www.housingandurban.go.ke/",
+      "projectSourceLabel": "Housing department programme information"
+    },
+    {
+      "category": "Stadiums",
+      "title": "Raila Odinga International Stadium",
+      "description": "Bird's-eye view of the stadium. The photo is dated 19 June 2026; check current government or venue updates separately for project progress and status.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Raila_Odinga_International_Stadium.webp/960px-Raila_Odinga_International_Stadium.webp",
+      "imageAlt": "Bird's-eye view of Raila Odinga International Stadium",
+      "imageDate": "19 June 2026",
+      "credit": "Raymond Omollo · CC0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Raila_Odinga_International_Stadium.webp",
+      "sourceLabel": "Photo details and license"
+    },
+    {
+      "category": "Railways",
+      "title": "Standard Gauge Railway · Mombasa Terminus",
+      "description": "Photograph of the Mombasa SGR terminus, taken 19 May 2022. This is an existing infrastructure asset shown for context, not a report of active construction.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Standard_Gauge_Railway_Station_-_Mombasa_Terminus_-_Kenya.jpg/960px-Standard_Gauge_Railway_Station_-_Mombasa_Terminus_-_Kenya.jpg",
+      "imageAlt": "Standard Gauge Railway station at Mombasa Terminus",
+      "imageDate": "19 May 2022",
+      "credit": "Alien Kestay · CC BY-SA 4.0",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "photoSource": "https://commons.wikimedia.org/wiki/File:Standard_Gauge_Railway_Station_-_Mombasa_Terminus_-_Kenya.jpg",
+      "sourceLabel": "Photo details and license"
+    }
+  ],
+  "publicOpinion": [
+    {
+      "title": "Direction of the country",
+      "date": "June 2026",
+      "summary": "A TIFA survey reported 74% of respondents believed Kenya was moving in the wrong direction and 14% said it was moving in the right direction.",
+      "source": "https://peopledaily.digital/inside-politics/tifa-why-broad-based-govt-has-failed-to-lift-public-confidence"
+    },
+    {
+      "title": "Trust in the president",
+      "date": "May 2026 survey, reported June 2026",
+      "summary": "A TIFA survey reported 29% positive trust and 68% little or no trust in President William Ruto among surveyed respondents.",
+      "source": "https://peopledaily.digital/inside-politics/survey-indicates-kenyans-have-lowest-trust-in-ruto-tifa"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Kenya National Bureau of Statistics (KNBS)",
+      "purpose": "Official national accounts, employment, prices, public finance and sector statistics.",
+      "url": "https://www.knbs.or.ke/reports/2026-economic-survey/"
+    },
+    {
+      "name": "TIFA Research",
+      "purpose": "Published national opinion surveys and methodology disclosures.",
+      "url": "https://www.tifaresearch.com/kenyas-road-to-2027-general-election-political-parties-presidential-contest-and-coalition-dynamics/"
+    },
+    {
+      "name": "The Star",
+      "purpose": "Reporting on Politrack poll findings and reported fieldwork details.",
+      "url": "https://www.the-star.co.ke/news/2026-10-01-ruto-tops-presidential-race-poll-with-451"
+    },
+    {
+      "name": "Reuters",
+      "purpose": "Independent reporting on the National Infrastructure Fund and public-finance context.",
+      "url": "https://www.reuters.com/world/africa/kenya-infrastructure-fund-begins-deploying-26-billion-seed-capital-by-buying-2026-10-07/"
+    },
+    {
+      "name": "People Daily",
+      "purpose": "Reporting on TIFA public-trust and country-direction findings.",
+      "url": "https://peopledaily.digital/inside-politics/tifa-why-broad-based-govt-has-failed-to-lift-public-confidence"
+    },
+    {
+      "name": "Kenya News Agency",
+      "purpose": "Existing reporting link for Infotrak presidential preferences; unavailable during the latest check.",
+      "url": "https://www.kenyanews.go.ke/president-william-ruto-leading-with-32-per-cent-infotrak/"
+    }
+  ]
+}

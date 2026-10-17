@@ -1,0 +1,31 @@
+[
+  {
+    "slug": "how-to-read-kenya-presidential-polls",
+    "title": "How to read Kenyan presidential opinion polls",
+    "summary": "Five checks to make before comparing candidate percentages from different polls.",
+    "published": "2026-10-17",
+    "updated": "2026-10-17",
+    "sections": [
+      {"heading":"Start with the fieldwork dates","text":"A publication date tells you when findings were released. Fieldwork dates tell you when people answered. Compare those dates before interpreting a difference between two polls as a change in support."},
+      {"heading":"Read the question and the answer choices","text":"A question about who someone wants to win can differ from a question about who they would vote for. Candidate lists, undecided options and the population surveyed also affect how results should be interpreted."},
+      {"heading":"Check recruitment and methodology","text":"Look for the sample size, coverage, interview mode, weighting and who funded the research. A large voluntary online sample does not automatically represent the country. A reported margin of error does not resolve every potential source of bias."},
+      {"heading":"Keep website responses separate","text":"Our community survey describes people who chose to respond here. It is not a nationally representative poll. Its percentages are displayed separately from published polls, and older answers without a presidential preference are excluded from that question’s denominator."},
+      {"heading":"Return to the original publication","text":"Read the source and its limitations before sharing a chart. This site provides dated source links in the poll register; a source marked unverified should not be treated as a confirmed current finding."}
+    ],
+    "links":[{"label":"Compare published polls and their sources","url":"/polls"},{"label":"View community survey results","url":"/survey-results"},{"label":"Read our methodology","url":"/methodology"}]
+  },
+  {
+    "slug": "how-to-check-development-project-claims",
+    "title": "How to check claims about development projects",
+    "summary": "Follow a project from announcement to funding, delivery and documented outcomes.",
+    "published": "2026-10-17",
+    "updated": "2026-10-17",
+    "sections":[
+      {"heading":"Identify the exact project","text":"Record its name, location, responsible agency and the date of the claim. Similar names and photographs from nearby sites can make unrelated projects appear connected."},
+      {"heading":"Separate announcements from delivery","text":"A launch or funding announcement establishes a claim or intention. Seek dated records for procurement, spending, construction progress, completion and use before describing the project as delivered."},
+      {"heading":"Check what photographs establish","text":"A photograph can provide visual context for a place at a particular time. It does not establish the full cost, funding source, occupancy, completion or impact of a project. Read the caption and date, and avoid presenting unmatched images as before-and-after evidence."},
+      {"heading":"Keep a record of changes","text":"Link to the evidence, explain uncertainty and record when information changes. Our development tracker distinguishes reported commitments from the evidence still needed to assess delivery."}
+    ],
+    "links":[{"label":"Explore the development tracker","url":"/developments"},{"label":"Sources and methodology","url":"/methodology"}]
+  }
+]

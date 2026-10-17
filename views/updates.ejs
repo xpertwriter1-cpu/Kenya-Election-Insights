@@ -1,0 +1,6 @@
+<%- include('partials/header',{title:'Updates and explainers'}) %>
+<section class="page-hero"><div class="container"><span class="eyebrow">UPDATES AND EXPLAINERS</span><h1>Understand the evidence.</h1><p>Practical guides to reading polls and checking public claims.</p></div></section>
+<section class="section"><div class="container"><p><a class="btn btn-dark" href="/daily-analysis">Read the daily political briefing</a></p><div class="row g-3">
+<% articles.forEach(article=>{ %><div class="col-md-6"><article class="opinion-card h-100"><time datetime="<%= article.published %>"><%= article.published %></time><h2><a href="/updates/<%= article.slug %>"><%= article.title %></a></h2><p><%= article.summary %></p><a href="/updates/<%= article.slug %>">Read the explainer</a></article></div><% }) %>
+</div></div></section>
+<%- include('partials/footer') %>

@@ -1,0 +1,32 @@
+<%- include('partials/header',{title:'Community survey results'}) %>
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">VOLUNTARY COMMUNITY SURVEY</span>
+    <% if(submitted){ %>
+      <h1>Your response is in.<br><em>See the results.</em></h1>
+      <p>Thank you for taking part. The updated results below include your saved response.</p>
+    <% } else { %>
+      <h1>Survey results.<br><em>See what participants said.</em></h1>
+      <p>These live totals summarize the answers submitted through this website's voluntary questionnaire.</p>
+    <% } %>
+  </div>
+</section>
+<% if(opinionStats){ %>
+  <%- include('partials/opinion-results',{opinionStats,compact:false}) %>
+<% } else { %>
+  <section class="section section-soft">
+    <div class="container">
+      <div class="notice"><strong>Live results are unavailable.</strong> The survey database is not connected, so no submitted responses can be counted or displayed yet. Please try again later.</div>
+    </div>
+  </section>
+<% } %>
+<%- include('partials/presidential-polls',{polls}) %>
+<section class="cta">
+  <div class="container cta-inner">
+    <div><span class="eyebrow dark">HAVE YOUR SAY</span><h2>Add your response</h2><p>Responses are voluntary and self-selected, not representative of all Kenyans.</p></div>
+    <a class="btn btn-dark btn-lg" href="/have-your-say">Take the survey →</a>
+  </div>
+</section>
+<p class="container fine-print">Results refresh automatically every 30 seconds while this page is open.</p>
+<script src="/js/survey-results.js" defer></script>
+<%- include('partials/footer') %>

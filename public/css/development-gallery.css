@@ -1,0 +1,135 @@
+.development-gallery {
+  margin: 0 0 3rem;
+}
+
+.development-gallery-compact {
+  padding: 4.5rem 0;
+  margin: 0;
+  background: #f6f5ef;
+}
+
+.development-gallery-compact > .section-head,
+.development-gallery-compact > .development-gallery-intro,
+.development-gallery-compact > .development-gallery-grid {
+  width: min(100% - 2rem, 1140px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.development-gallery-intro {
+  max-width: 780px;
+  margin-bottom: 1.5rem;
+  color: #667775;
+  font-size: .9rem;
+  line-height: 1.65;
+}
+
+.development-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.development-photo-card {
+  overflow: hidden;
+  border: 1px solid #e4e9e3;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 12px 35px #173d300b;
+}
+
+.development-photo-featured {
+  grid-row: span 2;
+}
+
+.development-photo-link {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: #e4e9e3;
+  aspect-ratio: 16 / 9;
+}
+
+.development-photo-featured .development-photo-link {
+  height: calc(100% - 220px);
+  min-height: 280px;
+  max-height: 410px;
+  aspect-ratio: auto;
+}
+
+.development-photo-link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+
+.development-photo-link:hover img {
+  transform: scale(1.035);
+}
+
+.development-photo-category {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  padding: .45rem .8rem;
+  border-radius: 99px;
+  color: #fff;
+  background: #123c35e8;
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+.development-photo-copy {
+  padding: 1.2rem 1.3rem 1.4rem;
+}
+
+.development-photo-copy .date-label {
+  margin-bottom: .5rem;
+}
+
+.development-photo-copy h3 {
+  margin-bottom: .6rem;
+}
+
+.development-photo-copy p {
+  margin-bottom: .8rem;
+  color: #667775;
+  font-size: .88rem;
+  line-height: 1.65;
+}
+
+.development-photo-credit {
+  color: #0f5b4c;
+  font-size: .76rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+  .development-gallery-compact {
+    padding: 3.2rem 0;
+  }
+
+  .development-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .development-photo-featured {
+    grid-row: auto;
+  }
+
+  .development-photo-featured .development-photo-link {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .development-photo-link img {
+    transition: none;
+  }
+}

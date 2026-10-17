@@ -1,0 +1,17 @@
+<meta name="robots" content="<%= growth.indexable ? 'index,follow' : 'noindex,follow' %>">
+<% if(growth.canonical){ %><link rel="canonical" href="<%= growth.canonical %>"><meta property="og:url" content="<%= growth.canonical %>"><% } %>
+<meta property="og:site_name" content="Kenya Election Insights">
+<meta property="og:type" content="<%= growth.article ? 'article' : 'website' %>">
+<meta property="og:title" content="<%= growth.title %>">
+<meta property="og:description" content="<%= growth.description %>">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<%= growth.title %>">
+<meta name="twitter:description" content="<%= growth.description %>">
+<% if(growth.image){ %><meta property="og:image" content="<%= growth.image %>"><meta property="og:image:alt" content="Kenya Election Insights — evidence first, citizens first"><meta name="twitter:image" content="<%= growth.image %>"><% } %>
+<% if(growth.verification){ %><meta name="google-site-verification" content="<%= growth.verification %>"><% } %>
+<% if(growth.origin){ %><link rel="alternate" type="application/rss+xml" title="Kenya Election Insights updates" href="<%= growth.origin %>/feed.xml"><% } %>
+<% if(growth.article && growth.canonical){ %>
+<meta property="article:published_time" content="<%= growth.article.published %>">
+<meta property="article:modified_time" content="<%= growth.article.updated %>">
+<script type="application/ld+json"><%- JSON.stringify({'@context':'https://schema.org','@type':'Article',headline:growth.article.title,description:growth.article.summary,datePublished:growth.article.published,dateModified:growth.article.updated,mainEntityOfPage:growth.canonical,image:[growth.image],author:{'@type':'Organization',name:'Kenya Election Insights',url:growth.origin}}).replace(/</g,'\\u003c') %></script>
+<% } %>

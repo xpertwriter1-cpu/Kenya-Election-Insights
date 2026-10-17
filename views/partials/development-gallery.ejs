@@ -1,0 +1,27 @@
+<section class="development-gallery <%= compact ? 'development-gallery-compact' : '' %>" aria-labelledby="development-gallery-title">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow dark">KENYA · INFRASTRUCTURE IN FOCUS</span>
+      <h2 id="development-gallery-title">Projects worth following</h2>
+    </div>
+    <% if(compact){ %><a class="text-link" href="/developments">Explore the development tracker →</a><% } %>
+  </div>
+  <p class="development-gallery-intro">The Boma Yangu listing identifies its Mukuru Estate photo as an ongoing project in South B, Nairobi. The photo shows housing blocks under development, not confirmed completion, handover, or occupancy. The older Mukuru Kwa Njenga photos document different dates and conditions; they are not a matched before/after comparison with the Boma Yangu site. Check each source before drawing conclusions.</p>
+  <div class="development-gallery-grid">
+    <% developmentGallery.forEach((item,index)=>{ %>
+      <article class="development-photo-card <%= index===0 ? 'development-photo-featured' : '' %>">
+        <a class="development-photo-link" href="<%= item.photoSource %>" target="_blank" rel="noopener" aria-label="View photo source and license: <%= item.title %>">
+          <img src="<%= item.image %>" alt="<%= item.imageAlt %>" loading="lazy" decoding="async">
+          <span class="development-photo-category"><%= item.category %></span>
+        </a>
+        <div class="development-photo-copy">
+          <span class="date-label">Photo: <%= item.imageDate %></span>
+          <h3><%= item.title %></h3>
+          <p><%= item.description %></p>
+          <a class="development-photo-credit" href="<%= item.photoSource %>" target="_blank" rel="noopener"><%= item.credit %> · <%= item.sourceLabel %> ↗</a>
+          <% if(item.projectSource){ %><br><a class="development-photo-credit" href="<%= item.projectSource %>" target="_blank" rel="noopener"><%= item.projectSourceLabel %> ↗</a><% } %>
+        </div>
+      </article>
+    <% }) %>
+  </div>
+</section>

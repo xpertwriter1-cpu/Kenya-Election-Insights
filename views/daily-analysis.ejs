@@ -1,0 +1,20 @@
+<%- include('partials/header',{title:'Daily political analysis'}) %>
+<section class="page-hero"><div class="container"><span class="eyebrow">DAILY POLITICAL BRIEFING</span><h1>Politics in context.</h1><p>A source-linked daily briefing on political reporting and the evidence to check behind it.</p></div></section>
+<section class="section"><div class="container">
+<% if(!edition){ %><div class="notice">The first daily briefing is not available yet.<% if(!enabled){ %> Automatic source checks are currently disabled.<% } %></div>
+<% }else{ %>
+<p><strong>Edition: <%= edition.day %></strong> · Sources checked <%= new Date(edition.checkedAt).toLocaleString('en-GB',{timeZone:'Africa/Nairobi'}) %> EAT</p>
+<% if(edition.day!==today){ %><div class="notice">This is an older edition. Today’s source check has not completed.</div><% } %>
+<p><%= edition.analysis.summary %></p>
+<div class="notice mb-4"><strong>How to read this briefing:</strong> This automated briefing groups source headlines into themes and provides methodological context. It does not read or independently verify the full articles, infer public sentiment, predict a winner or update poll percentages. A new daily check does not mean a new poll has been published. Opinion pieces and reported claims should be assessed in their original context.</div>
+<h2>Analysis and questions to watch</h2><div class="row g-3 mb-4"><% edition.analysis.themes.forEach(theme=>{ %><div class="col-md-4"><article class="opinion-card h-100"><h3><%= theme.title %></h3><p><%= theme.count %> matching headlines; themes may overlap.</p><p><%= theme.meaning %></p></article></div><% }) %></div>
+<h2>Source evidence</h2><div class="row g-3"><% edition.sources.forEach(source=>{ %><div class="col-lg-4"><article class="opinion-card h-100"><h3><%= source.name %></h3>
+<p class="fine-print"><%= source.status==='ok'?'Source retrieved':'Source unavailable' %></p>
+<% if(source.status!=='ok'){ %><p><%= source.error %></p><% }else if(!source.items.length){ %><p>No qualifying political headlines from the last seven days were found. This does not establish that the source has published no updates.</p><% } %>
+<ul><% source.items.forEach(item=>{ %><li class="mb-3"><a href="<%= item.url %>" target="_blank" rel="noopener noreferrer"><%= item.title %></a><br><time class="fine-print" datetime="<%= item.published %>"><%= new Date(item.published).toLocaleDateString('en-GB',{timeZone:'Africa/Nairobi'}) %></time></li><% }) %></ul>
+<a href="<%= source.home %>" target="_blank" rel="noopener noreferrer">Visit source</a></article></div><% }) %></div>
+<% } %>
+<p class="fine-print mt-4">Checks run once per Nairobi calendar day while the app is running, with a catch-up check on startup or the next visit. Only dated headlines from the configured TIFA, The Star and Kenya News Agency feeds/pages are considered. Source coverage is incomplete; feed availability and page layouts can affect results. No article bodies are republished.</p>
+<a href="/polls">Compare dated presidential polls</a> · <a href="/updates">Read explainers</a>
+</div></section>
+<%- include('partials/footer') %>

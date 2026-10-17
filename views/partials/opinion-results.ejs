@@ -1,0 +1,40 @@
+<section class="section section-soft" aria-labelledby="live-survey-results">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow dark">COMMUNITY SURVEY · LIVE RESULTS</span>
+        <h2 id="live-survey-results">Answers from website participants</h2>
+      </div>
+      <span class="tag"><%= opinionStats.total %> responses</span>
+    </div>
+    <p class="fine-print">These counts update after saved responses are submitted. Participation is voluntary and self-selected; results are not representative of all Kenyans and should not be compared directly with scientific polls.</p>
+    <% if(opinionStats.total===0){ %>
+      <p>No responses have been submitted yet. Be the first to take the survey.</p>
+    <% } else { %>
+      <div class="row g-3">
+        <% opinionStats.questions.filter(question=>!compact||['presidentialPreference','direction','topIssue'].includes(question.key)).forEach(question=>{ %>
+          <div class="col-md-6">
+            <article class="opinion-card">
+              <h3><%= question.title %></h3>
+              <% if(question.key==='presidentialPreference'){ %>
+                <p class="fine-print"><%= question.answered %> answers to this question. Percentages include Other, Undecided and Prefer not to say; earlier responses without an answer are excluded. Rounded percentages may not total 100%. These are voluntary preferences, not official election results or a prediction.</p>
+                <% if(question.answered===0){ %><p>No presidential preferences have been submitted yet.</p><% } %>
+              <% } %>
+              <% question.values.forEach(value=>{ %>
+                <div class="poll-result">
+                  <div class="d-flex justify-content-between gap-3">
+                    <span><%= value.label %></span>
+                    <strong><%= value.count %> · <%= value.percentage %>%</strong>
+                  </div>
+                  <div class="bar-track" role="img" aria-label="<%= value.label %>: <%= value.count %> responses, <%= value.percentage %> percent">
+                    <div class="bar-fill" style="width:<%= value.percentage %>%"></div>
+                  </div>
+                </div>
+              <% }) %>
+            </article>
+          </div>
+        <% }) %>
+      </div>
+    <% } %>
+  </div>
+</section>

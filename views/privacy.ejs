@@ -1,0 +1,32 @@
+<%- include('partials/header',{title:'Privacy and advertising'}) %>
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">PRIVACY · ADVERTISING</span>
+    <h1>Your privacy<br><em>and your choices.</em></h1>
+    <p>How this site handles voluntary survey answers and advertising technologies.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container" style="max-width:850px">
+    <p class="fine-print">Last updated: 17 October 2026</p>
+    <div class="notice mb-4"><strong>Important:</strong> Survey participation is optional. The responses are self-selected, are not representative of all Kenyans, and are not used to calculate election forecasts.</div>
+
+    <h2>Information submitted in the survey</h2>
+    <p>The optional survey asks for your county, age group, the issue that most affects your household or community, your view of the country's direction, your view of public policy impact on your household, and an optional presidential preference (including a Prefer not to say choice). It does not ask for your name, phone number, email address, ID number. Please do not enter identifying information into survey fields.</p>
+    <p>When the database is configured and connected, submitted answers and an automatically generated submission timestamp are stored in the site's MongoDB database. When it is not connected, the site displays a message and does not claim that the response was saved. Aggregated counts and percentages are displayed to visitors; the survey's individual answers are not intentionally displayed as individual records.</p>
+
+    <h2 class="mt-4">Retention and deletion requests</h2>
+    <p>The application currently has no automatic retention period or self-service deletion feature. Survey records remain in the database until the site operator deletes them. To ask about or request deletion of a response, email <a href="mailto:xpertwriter1@gmail.com">xpertwriter1@gmail.com</a> with the approximate submission date and answers that could help identify the record. Because the survey does not collect contact details or a response ID, the operator may not be able to identify a particular record reliably. Do not email sensitive personal information.</p>
+
+    <h2 class="mt-4">Advertising, cookies, and consent</h2>
+    <p>If AdSense is enabled, Google may use cookies, local storage, or similar technologies and process information such as your browser, device, IP address, and interactions to provide, measure, and personalize ads, subject to your choices and Google's settings. Google and its advertising partners may receive information when your browser loads their services. Read <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">How Google uses information from sites or apps that use its services</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+    <p>For visitors in regions where consent is required, the site operator must configure and publish the applicable Google-certified consent message in AdSense under Privacy &amp; messaging. The AdSense script is loaded on all public content pages, including the survey, results and privacy pages. Consent messaging and ad behavior must be checked across those pages after deployment. The site does not currently provide its own cookie preference center. You can also manage Google's ad personalization through <a href="https://myadcenter.google.com/" target="_blank" rel="noopener">Google My Ad Center</a> and control cookies in your browser.</p>
+
+    <h2 class="mt-4">Optional analytics and updates</h2><p>If configured, Google Analytics loads only after you select Allow analytics. Your choice is stored in your browser and can be changed using the controls at the bottom of the page. Declining stops future analytics collection; it does not delete data already collected. Analytics may process page visits, referrers, device information and cookies. Survey answers are not sent as analytics events. Advertising consent is managed separately.</p><p>Newsletter and WhatsApp follow links, when configured, open external services. Signing up is optional and subject to the selected provider?s privacy terms. This site does not collect newsletter email addresses directly. The RSS feed can be followed without signing up.</p><h2 class="mt-4">Other service providers and technical logs</h2>
+    <p>This site loads fonts and interface libraries from Google Fonts and jsDelivr, serves ads through Google when enabled, and may use hosting-provider logs needed to operate and secure the service. Those providers may receive technical connection information from your browser. The site does not intentionally use survey answers to target ads.</p>
+
+    <h2 class="mt-4">Contact and changes</h2>
+    <p>For privacy questions or survey deletion requests, contact <a href="mailto:xpertwriter1@gmail.com">xpertwriter1@gmail.com</a>. This notice should be reviewed and updated if the survey, database, advertising, hosting, or data-retention practices change. It is an operational disclosure, not legal advice; the operator is responsible for assessing applicable privacy and consent requirements.</p>
+  </div>
+</section>
+<%- include('partials/footer') %>

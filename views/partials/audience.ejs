@@ -1,0 +1,23 @@
+<% if(growth.shareable){ %>
+<section class="container my-4" aria-label="Share this page">
+  <p><strong>Share this page</strong> — include the source and date when sharing findings.</p>
+  <div class="d-flex flex-wrap gap-2">
+    <a class="btn btn-outline-dark" target="_blank" rel="noopener noreferrer" href="https://wa.me/?text=<%= encodeURIComponent(growth.title+' '+growth.canonical) %>">WhatsApp</a>
+    <a class="btn btn-outline-dark" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/sharer/sharer.php?u=<%= encodeURIComponent(growth.canonical) %>">Facebook</a>
+    <a class="btn btn-outline-dark" target="_blank" rel="noopener noreferrer" href="https://twitter.com/intent/tweet?text=<%= encodeURIComponent(growth.title) %>&amp;url=<%= encodeURIComponent(growth.canonical) %>">X</a>
+    <button class="btn btn-outline-dark" type="button" data-copy-url="<%= growth.canonical %>">Copy link</button>
+    <span data-share-status role="status" aria-live="polite"></span>
+  </div>
+</section>
+<% } %>
+<section class="container my-4" aria-label="Follow updates"><h2>Keep up with the evidence</h2><p>Read our <a href="/updates">latest explainers</a><% if(growth.origin){ %> or follow the <a href="/feed.xml">RSS feed</a><% } %>.</p>
+<% if(growth.newsletter){ %><a class="btn btn-dark me-2" href="<%= growth.newsletter %>" target="_blank" rel="noopener noreferrer">Subscribe to updates</a><% } %>
+<% if(growth.whatsapp){ %><a class="btn btn-outline-dark" href="<%= growth.whatsapp %>" target="_blank" rel="noopener noreferrer">Follow our WhatsApp Channel</a><% } %></section>
+<% if(growth.ga){ %>
+<section class="container my-4" data-analytics-id="<%= growth.ga %>" aria-label="Analytics preferences">
+  <p>Optional audience analytics help us understand which pages are useful. Google Analytics loads only if you allow it. This choice is separate from advertising consent. <a href="/privacy">Privacy details</a>.</p>
+  <button class="btn btn-outline-dark" type="button" data-analytics-choice="yes">Allow analytics</button>
+  <button class="btn btn-outline-dark" type="button" data-analytics-choice="no">Decline analytics</button>
+  <span data-analytics-status role="status" aria-live="polite"></span>
+</section><script src="/js/audience.js" defer></script>
+<% } %>

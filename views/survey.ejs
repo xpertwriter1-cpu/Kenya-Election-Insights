@@ -1,0 +1,41 @@
+<%- include('partials/header',{title:'Have your say'}) %>
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">VOLUNTARY CITIZEN SURVEY</span>
+    <h1>Your experience<br><em>is part of the picture.</em></h1>
+    <p>Answer a few questions about public priorities and the direction of the country. Do not include your name, ID number or phone number.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container form-wrap">
+    <% if(saved){ %>
+      <div class="success-card">
+        <h2>Thank you for participating.</h2>
+        <p>Your response was saved. This voluntary website survey is not a scientific national poll.</p>
+        <% if(opinionStats){ %><a class="btn btn-dark me-2" href="#live-survey-results">View updated community statistics ↓</a><% } %>
+        <a href="/">Return to overview →</a>
+      </div>
+    <% } else { %>
+      <% if(error){ %><div class="alert alert-warning"><%= error %></div><% } %>
+      <div class="notice mb-4"><strong>Privacy and limitations:</strong> This form does not ask for your name. Presidential preference is optional; choose ?Prefer not to say? to decline. Participation is voluntary and not nationally representative. <a href="/survey-results">View current community survey results</a>.</div>
+      <form method="post" action="/have-your-say" class="survey-form">
+        <label for="presidentialPreference">Who would you prefer as president?</label>
+        <select id="presidentialPreference" name="presidentialPreference" required><option value="">Choose an answer</option><% presidentialChoices.forEach(choice=>{ %><option><%= choice %></option><% }) %></select>
+        <p class="fine-print">This measures preferences among website participants, not official election results or a forecast.</p>
+        <label for="county">County</label>
+        <select id="county" name="county" required><option value="">Choose county</option><% counties.forEach(c=>{ %><option><%= c %></option><% }) %></select>
+        <label for="ageBand">Age group</label>
+        <select id="ageBand" name="ageBand" required><option value="">Choose age group</option><% ['18-24','25-34','35-44','45-54','55+'].forEach(x=>{ %><option><%= x %></option><% }) %></select>
+        <label for="topIssue">Which issue most affects your household or community?</label>
+        <select id="topIssue" name="topIssue" required><option value="">Choose one issue</option><% ['Cost of living','Jobs','Healthcare','Education','Debt and taxes','Corruption and accountability','Security','Infrastructure','Agriculture','Other'].forEach(x=>{ %><option><%= x %></option><% }) %></select>
+        <label for="direction">Overall, do you think Kenya is moving in the right or wrong direction?</label>
+        <select id="direction" name="direction" required><option value="">Choose an answer</option><% ['Right direction','Wrong direction','Unsure'].forEach(x=>{ %><option><%= x %></option><% }) %></select>
+        <label for="policyView">Compared with a few years ago, how do you view public policy impact on your household?</label>
+        <select id="policyView" name="policyView" required><option value="">Choose an answer</option><% ['Improved','No major change','Worsened','Unsure'].forEach(x=>{ %><option><%= x %></option><% }) %></select>
+        <button class="btn btn-dark btn-lg w-100 mt-4" type="submit">Submit response securely</button>
+        <p class="fine-print mt-3">Your response is only stored when MongoDB is configured and connected.</p>
+      </form>
+    <% } %>
+  </div>
+</section>
+<%- include('partials/footer') %>

@@ -1,0 +1,4 @@
+<%- include('partials/header',{title:article.title}) %>
+<article><section class="page-hero"><div class="container"><span class="eyebrow">EXPLAINER</span><h1><%= article.title %></h1><p><%= article.summary %></p><p>By Kenya Election Insights editorial team · Published <time datetime="<%= article.published %>"><%= article.published %></time> · Updated <time datetime="<%= article.updated %>"><%= article.updated %></time></p></div></section>
+<section class="section"><div class="container" style="max-width:850px"><% article.sections.forEach(section=>{ %><h2><%= section.heading %></h2><p class="mb-4"><%= section.text %></p><% }) %><h2>Explore the evidence</h2><ul><% article.links.forEach(link=>{ %><li><a href="<%= link.url %>"><%= link.label %></a></li><% }) %></ul><p>Corrections: <a href="mailto:xpertwriter1@gmail.com">xpertwriter1@gmail.com</a>. Include the page URL and supporting evidence.</p></div></section></article>
+<%- include('partials/footer') %>
