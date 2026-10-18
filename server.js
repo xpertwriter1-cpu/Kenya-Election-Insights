@@ -36,13 +36,14 @@ app.get('/ads.txt', (req, res) => {
 const presidentialCandidates = JSON.parse(fs.readFileSync(path.join(__dirname,'data','presidential-candidates.json'),'utf8'));
 const presidentialChoices = [...presidentialCandidates, 'Other', 'Undecided', 'Prefer not to say'];
 app.locals.presidentialChoices = presidentialChoices;
-let dbReady=false; let OpinionResponse;
+const database=require('./database').createDatabase(mongoose,process.env.MONGODB_URI || '');
+let OpinionResponse;
 const schema=new mongoose.Schema({presidentialPreference:{type:String,enum:presidentialChoices},county:{type:String,required:true},ageBand:{type:String,enum:['18-24','25-34','35-44','45-54','55+'],required:true},topIssue:{type:String,required:true},direction:{type:String,enum:['Right direction','Wrong direction','Unsure'],required:true},policyView:{type:String,enum:['Improved','No major change','Worsened','Unsure'],required:true},createdAt:{type:Date,default:Date.now}},{versionKey:false});
 OpinionResponse=mongoose.model('OpinionResponse',schema);
-if(process.env.MONGODB_URI) mongoose.connect(process.env.MONGODB_URI).then(()=>{dbReady=true;console.log('MongoDB connected')}).catch(e=>console.error('MongoDB unavailable; sample mode remains active:',e.message));
+
 const asyncRoute=handler=>(req,res,next)=>Promise.resolve(handler(req,res,next)).catch(next);
 const getOpinionStats=async()=>{
- if(!dbReady) return null;
+ if(!await database.connect()) return null;
  const [result]=await OpinionResponse.aggregate([{$facet:{
   total:[{$count:'count'}],
   presidentialPreference:[{$match:{presidentialPreference:{$in:presidentialChoices}}},{$group:{_id:'$presidentialPreference',count:{$sum:1}}},{$sort:{_id:1}}],
@@ -99,11 +100,14 @@ app.post('/have-your-say',rateLimit({windowMs:60*60*1000,limit:5}),asyncRoute(as
  const {county,ageBand,topIssue,direction,policyView,presidentialPreference}=req.body;
  const issues=['Cost of living','Jobs','Healthcare','Education','Debt and taxes','Corruption and accountability','Security','Infrastructure','Agriculture','Other'];
  if((presidentialPreference!==undefined&&!presidentialChoices.includes(presidentialPreference))||!seed.counties.includes(county)||!['18-24','25-34','35-44','45-54','55+'].includes(ageBand)||!issues.includes(topIssue)||!['Right direction','Wrong direction','Unsure'].includes(direction)||!['Improved','No major change','Worsened','Unsure'].includes(policyView)) return res.status(400).render('survey',{saved:false,error:'Please check every field and submit again.',counties:seed.counties,opinionStats:await getOpinionStats()});
- if(!dbReady) return res.render('survey',{saved:false,error:'MongoDB is not connected, so your response was NOT stored. Configure MONGODB_URI in .env and restart the app.',counties:seed.counties,opinionStats:null});
+ if(!await database.connect()) return res.status(503).render('survey',{saved:false,error:'The survey database is temporarily unavailable. Your response was not stored. Please try again later.',counties:seed.counties,opinionStats:null});
  await OpinionResponse.create({county,ageBand,topIssue,direction,policyView,presidentialPreference});
  res.redirect(303,'/survey-results?submitted=1');
 }));
-app.get('/health',(req,res)=>res.json({ok:true,database:dbReady?'connected':'sample-data mode'}));
+app.get('/health',asyncRoute(async(req,res)=>{
+ const connected=await database.connect();
+ res.set('Cache-Control','no-store').json({ok:true,database:connected?'connected':'unavailable',reason:connected?null:database.status().reason});
+}));
 app.use((error,req,res,next)=>{
  console.error('Request failed:',error);
  if(res.headersSent) return next(error);
